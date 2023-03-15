@@ -1,92 +1,77 @@
 <!DOCTYPE html>
 <html lang="ko">
 <head>
-    <title>회원가입</title>
+    <title>Bootstrap Example</title>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css2?family=Noto+Sans+KR&display=swap" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <script src="https://kit.fontawesome.com/fdb840a8cc.js" crossorigin="anonymous"></script>
     <style>
         * { font-family: 'Noto Sans KR', sans-serif; }
         a { text-decoration: none; }
         td { text-align: center; }
     </style>
 </head>
-
 <body>
     <nav class="navbar navbar-expand-sm bg-dark navbar-dark fixed-top">
         <div class="container-fluid">
             <img src="ck-logo.png" height="60">
-            <img src="https://picsum.photos/1600/160?q=1" alt="picsum" width="1600" height="160">
-        </div>
-    </nav>   
-
-    <div class="container" style="margin-top: 300px;">
-        <div class="row">          
-            <div class="col">                
+            <div class="p-2 bg-dark justify-content-center">
+                <img src="https://picsum.photos/1500/180?q=1" width="100%">
             </div>
-
-            <div class="col"> 
-                <h2><strong>회원 가입</strong></h2>
+        </div>
+    </nav>
+    <div class="container" style="margin-top: 250px;">
+        <div class="row">
+            <div class="col"></div>
+            <div class="col">
+                <h3><strong>회원 가입</strong></h3>
                 <hr>
                 <form action="/user/login" method="post">
-                    <table class="table table-borderless" >
+                    <table class="table table-borderless">
                         <tr>
-                            <td style="width: 40%;">사용자ID</td>
-                            <td style="width: 60%;"><input></td>
-                        </tr>
-                        <tr>
-                            <td style="width: 40%;">패스워드</td>
-                            <td style="width: 60%;"><input></td>
+                            <td style="width:40%"><label class="col-form-label">사용자 ID</label></td>
+                            <td style="width:60%"><input type="text" class="form-control" name="uid"></td>
                         </tr>
                         <tr>
-                            <td style="width: 40%;">패스워드 확인</td>
-                            <td style="width: 60%;"><input></td>
+                            <td><label class="col-form-label">패스워드</label></td>
+                            <td><input type="password" class="form-control" name="pswd"></td>
                         </tr>
                         <tr>
-                            <td style="width: 40%;">이름</td>
-                            <td style="width: 60%;"><input></td>
+                            <td><label class="col-form-label">패스워드 확인</label></td>
+                            <td><input type="password" class="form-control" name="pswd2"></td>
                         </tr>
-                        <tr> 
-                            <td style="width: 40%;">이메일</td>
-                            <td style="width: 60%;"><input></td>
+                        <tr>
+                            <td><label class="col-form-label">사용자 이름</label></td>
+                            <td><input type="text" class="form-control" name="uname"></td>
                         </tr>
-                        <tr> 
-                            <td style="width: 40%; text-align: center;" >사진선택</label></td>
-                            <td style="width: 60%;"></td>
+                        <tr>
+                            <td><label class="col-form-label">이메일</label></td>
+                            <td><input type="email" class="form-control" name="email"></td>
                         </tr>
-                        <tr> 
-                            <td style="width: 40%;">성별</td>
-                            <td style="width: 60%; text-align: left;">
-                                <input type="radio" name="gender" value="man" checked> 남자
-                                <input class="ms-3" type="radio" name="gender" value="waman"> 여자
+                        <tr>
+                            <td><label>성별</label></td>
+                            <td>
+                                <input type="radio" name="gender" value="1" checked> 남자
+                                <input class="ms-3" type="radio" name="gender" value="2"> 여자
                             </td>
                         </tr>
                         <tr>
-                            <td colspan="2" style="text-align: center;">
+                            <td><label class="col-form-label">프로필 사진</label></td>
+                            <td><input type="file" class="form-control" name="profile"></td>
+                        </tr>
+                        <tr>
+                            <td colspan="2">
                                 <input type="submit" class="btn btn-primary" value="제출">
-                                <input type="submit" class="btn btn-secondary" value="취소">
+                                <input type="reset" class="btn btn-secondary" value="취소">
                             </td>
-                        </tr>               
+                        </tr>
                     </table>
                 </form>
             </div>
-
-            <div class="col">              
-            </div>
-    
+            <div class="col"></div>
         </div>
     </div>
-    
-    <nav class="navbar navbar-expand-sm bg-light fixed-bottom">
-        <div class="container-fluid justify-content-center">
-            <span class="navbar-text">
-                Copyright &copy; 2021-2023 CK World Corp. All rights reserved.
-            </span>
-        </div>
-    </nav>
-
 </body>
 </html>
