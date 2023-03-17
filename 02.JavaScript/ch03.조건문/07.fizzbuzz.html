@@ -6,23 +6,26 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Fizz Buzz 게임</title>
     <script>
-        function fizzbuzz() {
+        function fizzBuzz() {
             let num = Number(document.getElementById('num').value);
             let resTag = document.getElementById('result');
-            if (num % 3 == 0 && num % 5 == 0)
-                resTag.innerHTML = '<h4>FizzBuzz</h4>';
-            else if (num % 3 == 0 && num % 5 != 0)
-                resTag.innerHTML = '<h4>Fizz</h4>';
-            else if (num % 3 != 0 && num % 5 == 0)
-                resTag.innerHTML = '<h4>Buzz</h4>';
+
+            let fb;
+            if (num % 15 == 0)
+                fb = 'FizzBuzz';
+            else if (num % 3 == 0)
+                fb = 'Fizz';
+            else if (num % 5 == 0)
+                fb = 'Buzz';
             else
-                resTag.innerHTML = '<h4>' + num + '</h4>';
+                fb = num;
+            resTag.innerHTML = '<h4>' + fb + '</h4>';
             }
     </script>
 </head>
 <body style="margin: 50px;">
     <input type="text" id="num" placeholder="정수입력">    
-    <button onclick="fizzbuzz()">확인</button>
+    <button onclick="fizzBuzz()">확인</button>
     <p id="result"></p>
 </body>
 </html>
