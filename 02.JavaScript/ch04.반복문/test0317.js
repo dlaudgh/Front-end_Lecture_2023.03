@@ -1,11 +1,11 @@
-// 2739
+// 2739 구구단
 let prod = 0;
 for (let i = 1; i <= 9; i++) {
     prod = i * 2
 console.log(`2 * ${i} = ${prod}`)
 }
 
-// 2884
+// 2884 알람시계
 let h = 23, m = 59;
 console.log(`${h} ${m}`);
 
