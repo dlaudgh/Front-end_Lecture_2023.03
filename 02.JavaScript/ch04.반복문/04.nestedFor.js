@@ -34,7 +34,7 @@ for (let i = 1; i <= 5; i++) {
     for (let k = 0; k < i; k++) {        // i개 만큼 별 만들기
         star += '*';
     }
-    console.log(star);
+    // console.log(star);
 }
 
 // 다이아몬드 그리기 (3사분면)

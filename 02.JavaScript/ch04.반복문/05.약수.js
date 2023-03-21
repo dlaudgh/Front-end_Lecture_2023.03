@@ -5,7 +5,7 @@ for (let i = 1; i <= num; i++) {
     if (num % i == 0)
     divisors.push(i);
 }
-// console.log(`${num}의 약수: ${divisors}`);
+console.log(`${num}의 약수: ${divisors}`);
 
 // 두 자연수의 공약수 찾기
 let num1 = 24, num2 = 60;

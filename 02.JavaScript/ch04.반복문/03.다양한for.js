@@ -2,7 +2,7 @@
 let sum = 0;
 for (let i = 10; i > 0; i--) {
     sum += i;
-// console.log(`index=${i}, sum=${sum}`);
+console.log(`index=${i}, sum=${sum}`);
 }
 
 // 1에서 10까지 홀수의 합
@@ -16,6 +16,6 @@ console.log(`index=${i}, sum=${oddSum}`);
 let sum3 = 0;
 for (let i = 48; i >= 10; i -= 3) {
     sum3 += i;
-// console.log(`index=${i}, sum=${sum3}`);
+console.log(`index=${i}, sum=${sum3}`);
 }
 
