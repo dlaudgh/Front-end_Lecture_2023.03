@@ -1,9 +1,9 @@
 // Date 객체 생성 방법
 // 1. 현재 날짜/시간
 let today = new Date();
-console.log(today);                 // 2023-03-21T00:17:25.657Z
-console.log(today.toDateString());  // Tue Mar 21 2023
-console.log(today.toLocaleString());    // Timezone 반영됨, 2023. 3. 21. 오전 9:19:03
+// console.log(today);                 // 2023-03-21T00:17:25.657Z
+// console.log(today.toDateString());  // Tue Mar 21 2023
+// console.log(today.toLocaleString());    // Timezone 반영됨, 2023. 3. 21. 오전 9:19:03
 
 // YYYY-MM-DD hh:mm:ss 형식으로 만들어준는 함수
 function twoDigit(num) {
@@ -13,19 +13,19 @@ function myDatetime(date) {
     return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} ` +
     `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
 }
-console.log(myDatetime(today));
+// console.log(myDatetime(today));
 
 // 2. Unix time 기준 (1970.1.1 이후 ms 단위)
 let unixDay = new Date(1.6794e12);      // 2023-03-21T12:00:00.000Z
-console.log(unixDay);
+// console.log(unixDay);
 
 // 3. 문자열 기반
 let strDate = new Date('2023-03-21 09:25:00');
-console.log(strDate);
+// console.log(strDate);
 
 // 4. 날짜/시간 요소 기반
-let elmentDay = new Date(2023, 2, 21, 9, 30, 0, 0);     // 시간 단위를 생략하면 0으로 대체됨
-console.log(elmentDay);
+let elementDay = new Date(2023, 2, 21, 9, 30, 0, 0);     // 시간 단위를 생략하면 0으로 대체됨
+// console.log(elementDay);
 
 // 시간연산
 // 더하기/빼기

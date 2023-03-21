@@ -7,11 +7,7 @@
     <title>Document</title>
     <script>
         function evenOdd() {
-            let numTag = document.getElementById('num');
-            let numStr = numTag.value;      // string
-            let num = Number(numStr);       // number
             num = Number(document.getElementById('num').value);
-
             let resTag = document.getElementById('result');
             if (num % 2 == 1) {
                 resTag.innerHTML = '<h4>홀수입니다.</h4>';

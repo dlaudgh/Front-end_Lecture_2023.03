@@ -4,7 +4,7 @@ let string = 'Hello'
 let boolean = true;
 console.log(typeof(number), typeof(string), typeof(boolean));
 
-// 객체 자료형 - 기본 자료형을 객체로 만든 것을 Wrapper class 라 불림0
+// 객체 자료형 - 기본 자료형을 객체로 만든 것을 Wrapper class 라 불림
 let numObj = new Number(273.14);
 let strObj = new String('Hello');
 let booObj = new Boolean(true);

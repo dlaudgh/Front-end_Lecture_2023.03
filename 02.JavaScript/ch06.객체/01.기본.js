@@ -1,6 +1,6 @@
 // 객체(Object)
 
-// 배역(Array)
+// 배열(Array)
 let fuits = ['딸기', '사과', '수박', '참외'];
 console.log(typeof fuits);
 
