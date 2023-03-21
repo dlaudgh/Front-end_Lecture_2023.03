@@ -84,12 +84,12 @@ function strCount(str, dst) {           // str 에서 dst가 몇번 사용되는
 }
 
 let numStr = '';
-for (let i = 1; i<1000; i++)
+for (let i = 1; i <= 1000; i++)
     numStr += i;                // 1234...9991000
-console.log(numStr.length)
+console.log(numStr.length);
 for(let num = 0; num <= 9; num++) {
-    // let count = numStr.split(String(num)).length - 1;
-    let count = strCount(numStr, String(num));
+    let count = numStr.split(String(num)).length - 1;
+    // let count = strCount(numStr, String(num));
     console.log(`${num} 은/는 ${count} 번 사용됨.`);
 }
 
