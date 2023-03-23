@@ -9,10 +9,10 @@
     <script>
         $(document).ready(function() {
             $('input')
-                .on('keyup', function(e) {
+                .on('keyup', function() {
                     $('#keyup').html($(this).val());    // 글자를 입력할 때 마다
                 })
-                .on('change', function(e) {
+                .on('change', function() {
                     $('#change').html($(this).val());   // 엔터를 쳤을 때
                 });
         });

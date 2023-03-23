@@ -9,22 +9,22 @@
     <script>
         $(document).ready(function() {
            const $lis = $('li');
-           for (let i = 0; i <= $lis.length; i++) {
-                if (i % 2 == 1) {       // 두번째, 네번째 등 짝수번째
+           for (let i=0; i<=$lis.length; i++) {
+                if (i%2==1) {       // 두번째, 네번째 등 짝수번째
                     const li = $lis.get(i);
                     $(li).css('backgroundColor', 'yellow');
                 }
-           }
-           $('li').each(function(index, element) {
+            }
+            $('li').each(function(index, element) {
                 if (index % 2 == 0)
                     $(this).css('backgroundColor', 'beige');    // 해당 element는 $(this)로 매핑
                 else
                     $(this).css('color', 'red');
-           });
-           /* $('span', '#fruits').css('fontSize', '30px')
-           $('span', '#food').css('fontSize', '20px')*/
+            });
+            /* $('span', '#fruits').css('fontSize', '30px')
+            $('span', '#food').css('fontSize', '20px')*/
  
-           $('span').each(function(index, element) {
+            $('span').each(function(index, element) {
                 if (index % 2 == 0)
                     $(this).css('fontSize', '30px');
                 else

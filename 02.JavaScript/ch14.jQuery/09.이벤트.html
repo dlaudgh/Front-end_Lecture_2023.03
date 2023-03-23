@@ -9,9 +9,9 @@
     <script>
         $(document).ready(function() {
             $('h1')
-                .on('mouseover', function(e) {$(this).css('backgroundColor', 'yellow')})
-                .on('mouseout', function(e) {$(this).css('backgroundColor', 'white')})
-            $('h1').on('click', function(e) {
+                .on('mouseover', function() {$(this).css('backgroundColor', 'yellow')})
+                .on('mouseout', function() {$(this).css('backgroundColor', 'white')})
+            $('h1').on('click', function() {
                 alert($(this).text());
            });
         });
