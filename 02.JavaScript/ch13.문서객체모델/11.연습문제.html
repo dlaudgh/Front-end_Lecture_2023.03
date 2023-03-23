@@ -1,62 +1,66 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bootstrap Example</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/css/bootstrap.min.css" rel="stylesheet">
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.3/dist/js/bootstrap.bundle.min.js"></script>
-    <title>Document</title>
-    <script>
-        function search() {
-            let str =  document.getElementById('str').value;
-            let text = 'the grown-ups' response, this time, was to advise me to lay aside my drawings of boa constrictors, whether from the inside or the outside, and devote myself instead to geography, history, arithmetic, and grammar. That is why, at the, age of six, I gave up what might have been a magnificent career as a painter. I had been disheartened by the failure of my Drawing Number One and my Drawing Number Two. Grown-ups never understand anything by themselves, and it is tiresome for children to be always and forever explaining things to the.'
-            newText = text.replace(/[-',.]/g, '');
-            newStr = newText.replace(/[A-Z]/g, '대');
-            
-            result += `${count}`;
-            
-            document.getElementById('result2').innerHTML = result;
-        }
-        function array() {
-            let num =  document.getElementById('num').value;
-
-            document.getElementById('result3').innerHTML = result;
-        }
-    </script>
+    <script src="11.연습문제.js"></script>
 </head>
 <body>
     <div class="container-fluid p-3 bg-primary text-white text-center">
         <h1>연습 문제</h1>
+        <p>문서객체 모델</p>
     </div>
     <div class="container mt-3">
         <div class="row">
             <div class="col">
+                <h4>Q1. 2의 거듭제곱</h4>
+                <hr>
+                <input type="text" id="num1" class="form-control" placeholder="1 ~ 20">
+                <input type="text" id="num2" class="form-control mt-2" placeholder="10 ~ 30">
+                <div class="text-center">
+                    <button class="btn btn-primary mt-3" onclick="ans1()">확인</button>
+                </div>
+                <hr>
+                <h4 id="result1"></h4>
             </div>
             <div class="col">
-                <h4>Q2. the 개수 출력</h4>
+                <h4>Q2. 특정 단어의 갯수</h4>
                 <hr>
-                <input type="text" id="str" class="form-control" placeholder="문자열">
+                <textarea id="sentence" class="form-control" rows="5"></textarea>
+                <input type="text" id="search" class="form-control mt-2" placeholder="찾을 단어">
                 <div class="text-center">
-                    <br>
-                    <button class="btn btn-primary mt-3" onclick="search()">확인</button>
+                    <button class="btn btn-primary mt-3" onclick="ans2()">확인</button>
                 </div>
                 <hr>
                 <h4 id="result2"></h4>
             </div>
             <div class="col">
-                <h4>Q3. 내림차순 출력</h4>
+                <h4>Q3. 내림차순 정렬</h4>
                 <hr>
-                <input type="text" id="num" class="form-control" placeholder="입력">
+                <input type="text" id="price" class="form-control" placeholder="가격 입력">
                 <div class="text-center">
-                    <br>
-                    <button class="btn btn-primary mt-3" onclick="array()">확인</button>
+                    <button class="btn btn-primary mt-3" onclick="ans3()">확인</button>
                 </div>
                 <hr>
                 <h4 id="result3"></h4>
             </div>
-            <div class="col">
-            </div>
+        </div>
+        <div class="row">
+            <h4>Q4. 디지털 시계</h4>
+            <hr>
+            <h1 id="date"></h1>
+            <hr>
+            <img id="h1" style="width:100px;">
+            <img id="h2" style="width:100px;">
+            <img src="digits/Colon.jpg" style="width:100px;">
+            <img id="m1" style="width:100px;">
+            <img id="m2" style="width:100px;">
+            <img src="digits/Colon.jpg" style="width:100px;">
+            <img id="s1" style="width:100px;">
+            <img id="s2" style="width:100px;">
         </div>
     </div>
 </body>
