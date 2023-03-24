@@ -31,7 +31,7 @@ function ans2() {
         if (word == search)
             count++;
     }
-    $('#result2').html(`${search}의 갯수는 ${count} 입니다.`);
+    $('#result2').text(`${search}의 갯수는 ${count} 입니다.`);
 }
 
 function ans3() {
@@ -59,20 +59,25 @@ function myDatetime(date) {
     return `${date.getFullYear()}-${twoDigit(date.getMonth()+1)}-${twoDigit(date.getDate())} ` +
         `${twoDigit(date.getHours())}:${twoDigit(date.getMinutes())}:${twoDigit(date.getSeconds())}`;
 }
-window.onload = function() {
+$(document).ready(function() {
     setInterval(function() {
         const now = new Date();
         const week = '일월화수목금토'.split('');            // ['일','월', ..., '토']
         let dateStr = myDatetime(now).substring(2, 10);     // 23-03-23
         dateStr += '(' + week[now.getDay()] + ')';          // 23-03-23(목)
         const timeStr = myDatetime(now).substring(11, 19);  // 10:16:00
-        $('#date').hrml(dateStr);
+        $('#date').text(dateStr);
+
+        const mapping = [0, 1, 3, 4, 6, 7];
+        $('.number').each(function(index, _) {
+            $(this).attr('src', `../ch13.문서객체모델/digits/${timeStr[mapping[index]]}.svg`);
+        });
         
-        $('#h1').src = `digits/${timeStr[0]}.svg`;
-        $('#h2').src = `digits/${timeStr[1]}.svg`;
-        $('#m1').src = `digits/${timeStr[3]}.svg`;
-        $('#m2').src = `digits/${timeStr[4]}.svg`;
-        $('#s1').src = `digits/${timeStr[6]}.svg`;
-        $('#s2').src = `digits/${timeStr[7]}.svg`;
+        /* $('#h1').attr('src', `../ch13.문서객체모델/digits/${timeStr[0]}.svg`);
+        $('#h2').attr('src', `../ch13.문서객체모델/digits/${timeStr[1]}.svg`);
+        $('#m1').attr('src', `../ch13.문서객체모델/digits/${timeStr[3]}.svg`);
+        $('#m2').attr('src', `../ch13.문서객체모델/digits/${timeStr[4]}.svg`);
+        $('#s1').attr('src', `../ch13.문서객체모델/digits/${timeStr[6]}.svg`);
+        $('#s2').attr('src', `../ch13.문서객체모델/digits/${timeStr[7]}.svg`); */
     }, 1000);
-}
+});
