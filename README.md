@@ -1,4 +1,4 @@
-# Front-end_Lecture_2023.03
+# Front-end_Lecture (2023.03)
 
 ### 프론트엔드 강좌
 
